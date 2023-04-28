@@ -1,32 +1,27 @@
-# 🥣 OPS/OpenPromptStudio
+# PromoteManagementWorkbench
 
-## 提示词工作室 | 可视化编辑提示词
+## 提示词管理工作台
 
 <p align="center">
     <img width="1430" alt="OPS-cover" src="https://user-images.githubusercontent.com/82231420/230757122-5cf5659e-9e1a-4288-80fd-84ec229a063e.png">
 </p>
 
-[**🥣 立即试试** moonvy.com/apps/ops/](https://moonvy.com/apps/ops/)
+[**🥣 立即试试** 待补充/](https://待补充/)
 
-这是一个旨在把 AIGC 提示词（现在支持 Midjourney）可视化并提供编辑功能的工具，有以下特性
-
--   显示英文提示词的中文翻译
+这是一个旨在把 AIGC 提示词（支持chatGPT,Midjourney）可视化并提供编辑功能的工具，有以下特性
+-   通过 Notion 管理提示词
 -   翻译输入的中文提示词到英文（因为 Midjourney 仅支持英文提示词）
 -   为提示词进行分类（普通、样式、质量、命令）
 -   轻松的排序、隐藏提示词
--   把提示词可视化结果导出为图片
+-   Alfred快速检索和使用prompts。
+-   把提示词可视化结果导出到Notion
 -   常用提示词词典
--   通过 Notion 管理提示词词典
 
-## 使用教程
+## 使用
 
-<a href="https://www.bilibili.com/video/BV15N411P7D3/?spm_id_from=333.337.search-card.all.click&vd_source=1f6edbc8e03c44932da52d02c0c11c1c" target="_blank">
- <img width="300" alt="OPS-cover" src="https://user-images.githubusercontent.com/82231420/230757939-dde301f1-bf68-4455-83c6-f7dd2214c68b.png">
-</a>
 
-[📺 B 站视频教程](https://www.bilibili.com/video/BV15N411P7D3/?spm_id_from=333.337.search-card.all.click&vd_source=1f6edbc8e03c44932da52d02c0c11c1c)
 
-## 如何连接的我的 Notion 来管理自己的词典
+## 如何连接的我的 Notion 来管理
 
 OPS 支持使用 [Notion](https://www.notion.so/) 来管理自己的词典，使用 Notion 管理相对简单，可自定义程度也很高。
 
