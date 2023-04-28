@@ -11,16 +11,16 @@
 
         <div class="operate-tool" ref="operate-tool">
             <button @click="doAddWorkspace"><Icon icon="radix-icons:card-stack-plus" /> 添加工作区</button>
-            <button @click="doCopyWorkspaceUrl"><Icon icon="radix-icons:link-2" /> 复制链接</button>
+            <button @click="doCopyWorkspaceUrl"><Icon icon="radix-icons:link-2" /> 导出</button>
 
-            <div class="pngout-option checkbox">
+            <!-- <div class="pngout-option checkbox">
                 <input id="ope-expf" type="checkbox" v-model="promptEditor.data.enablePngExportFixed" />
                 <label for="ope-expf"> 导出 PNG 时固定尺寸</label>
             </div>
             <div class="pngout-option checkbox">
                 <input id="ope-expf2" type="checkbox" v-model="promptEditor.data.enablePngExportCopy" />
                 <label for="ope-expf2"> 导出 PNG 到剪贴板</label>
-            </div>
+            </div> -->
 
             <div
                 class="server-select"

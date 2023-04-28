@@ -24,16 +24,13 @@ export async function fetchFromNotion(options: { apiKey: string; databaseId: str
         let re = await notion.databases.query({ database_id, start_cursor })
         console.log(`[notion] get page${i} :${start_cursor ?? "init"}`)
         re.results.forEach((page: any) => {
-            let text = page.properties?.text.title?.[0]?.text?.content
-            let desc = page.properties?.desc?.rich_text?.[0]?.text?.content
-            let lang_zh = page.properties?.["lang_zh"].rich_text?.[0]?.text?.content
-            let tags = page.properties?.tags?.multi_select?.map((x: any) => x.name)
-            let subType = page.properties?.subType?.select?.name
-            let dir = page.properties?.dir?.select?.name
-            let alias = page.properties?.alias?.rich_text?.[0]?.text?.content
-            subType = subTypeMap[subType] ?? "normal"
-            let item = { text, desc, lang_zh, subType, dir, tags, alias }
-            if (!text) return
+            debugger
+            let name = page.properties?.name.title?.[0]?.text?.content
+            let prompt = page.properties?.prompt?.rich_text?.[0]?.text?.content
+            let remark = page.properties?.remark?.rich_text?.[0]?.text?.content
+            let type = page.properties?.type?.select?.name
+            let item = { name, prompt, remark, type }
+            if (!name) return
             defineMap[item?.text?.toLowerCase()] = item
             if (typeof alias === "string") {
                 alias.split(/[,，]/).forEach((text) => {

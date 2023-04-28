@@ -61,6 +61,7 @@
                 </div>
                 <div class="line more-options">
                     <select v-model="inputParser" class="parser-select" v-tooltip="`提示词语法类型`">
+                        <option value="chatGPT">chatGPT</option>
                         <option value="midjourney">Midjourney</option>
                         <option value="stable-diffusion-webui">stable-diffusion-webui</option>
                     </select>
@@ -76,7 +77,7 @@
                 :class="[promptWork.groups.length <= 1 ? 'noGroup' : 'hasGroup']"
                 @contextmenu.prevent
             >
-                <div class="PromptGroup" v-for="group in promptWork.groups">
+                <div class="PromptGroup" v-if="inputParser!=='chatGPT'" v-for="group in promptWork.groups">
                     <div class="PromptGroupTitle" v-if="promptWork.groups.length > 1">
                         <div class="name">
                             <input value="权重组" /> <span v-if="group.name">{{ group.name }}</span>
@@ -84,6 +85,7 @@
                         </div>
                     </div>
                     <PromptList
+                        
                         v-for="promptList in group.lists"
                         :key="promptList.data.id"
                         :list="promptList"
